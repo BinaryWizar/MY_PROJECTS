@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Theme Toggle Container</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Light Theme */
+    body.light {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    /* Dark Theme */
+    body.dark {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .container {
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        border: 2px solid #888;
+        transition: background 0.3s, color 0.3s, border 0.3s;
+    }
+
+    /* Light Container */
+    body.light .container {
+        background: #f5f5f5;
+        border-color: #aaa;
+    }
+
+    /* Dark Container */
+    body.dark .container {
+        background: #1a1a1a;
+        border-color: #555;
+    }
+
+    .toggle-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+</head>
+<body class="light"> <!-- Default theme is LIGHT -->
+
+<div class="container">
+    <h2>Theme Toggle</h2>
+    <p>This container will change theme.</p>
+
+    <!-- You will control this button with your JS -->
+    <button class="toggle-btn" id="toggleBtn">Toggle Theme</button>
+</div>
+<script src="tt.js"></script>
+</body>
+</html>
